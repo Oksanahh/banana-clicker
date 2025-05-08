@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+<title>Банана клікер</title>
+<link rel="icon" type="image/png" sizes="32x32" href="bananaicon.png">
+<link rel="stylesheet" href="bananacal.css">
+</head>
+
+   
+        <body>
+
+        <div id="popUp" class="popUp">
+            <div class="popUpContent">
+                <h3 class="popUpText">
+                    <img src="popupbanana.png" class="popUpTexBananaImage">
+                    Привіт!
+                </h3>
+                <p class="popUpQuestion">Хочеш наклікати на бененас?</p>
+                <button class="popUpButton" onclick="proceed()">Дуже!<img src="yes.png" class="yesimage"></button>
+            </div>
+        </div>
+
+
+
+
+        <div class="clicker" id="clicker" style="display: none;">
+
+<audio src="background.mp3" id="backgroundMusic" preload="auto" loop></audio>
+
+            <div class="center-wrapper">
+<div class="stats">
+    <div><img src="nakedbanana.png" class="bananaImage"></div>
+    Бененас:
+    <span id="bananaCount"></span></div>
+<div class="stats"><div><img src="monkey.png" class="monkeyImage"></div>Манкіс:<span id="monkeyCount"></span></div>
+<div class="stats"><div><img src="bananapeel.png" class="bananaPeel"></div>Шкірки:<span id="bananaPeelCount"></span></div>
+<div class="stats"><div><img src="bananaLeaf.png" class="bananaLeafImage" alt="Leaf"></div>Листя: <span id="bananaLeafCount"></span></div>
+<div class="stats"><div><img src="bananaSmoothie.PNG" class="bananaSmoothieImage"></div>Смузі:<span id="bananaSmoothieCount"></span></div>
+
+<div class="banana-container">
+    <img src="banana.png" class="clickingBanana" onclick="collectBanana(event)" style="cursor: pointer;" draggable="false"
+    ondragstart="return false;">
+</div>
+
+
+<div id="notification" class="notification"></div>
+<div id="notificationBananaPeel" class="notificationBananaPeel"></div>
+
+<div class="shop-section">
+    <h2> Магазин </h2>
+    <div class="shop-items">
+
+<div class="shop">
+    <h3><img src="monkey.png" class="monkeyImage">Монкі</h3>
+      <p>+0.2 банана за секунду</p>
+      <button onclick="buyMonkey()">Buy Monkey (10)</button>
+    </div>
+    
+    <audio id="buy-sound" src="monkeysound.mp3" preload="auto"></audio>
+
+
+    <div class="shop">
+    <h3><img src="bananapeel.png" class="bananaPeel">Шкірка бененасу</h3>
+          <p>+1 банан за клік</p>
+          <button onclick="buyItem('peel')">Купити (50)</button>
+          </div>
+
+<div class="shop">
+<h3><img src="bananaLeaf.png" class="bananaLeafImage">Банановий лист</h3>  
+<p>+1 банан за секунду</p>
+<button onclick="buyLeaf()">Купити (200)</button> </div>
+
+<div class="shop">
+    <h3><img src="bananaSmoothie.PNG" class="bananaSmoothieImage">Бананове смузі</h3>  
+    <p>+3 банани за клік на 15 секунд</p>
+    <button id="smoothie-button" onclick="buySmoothie()">Купити (300)</button> </div>
+
+
+</div>
+        </div>
+        </div>
+
+        <button class='returnbutton' onclick="resetGame()">Почати спочатку</button>
+
+        <button id="sound-toggle" class="onAndOff">
+            <img
+            id="sound-icon"
+            src="yesmusic.png"
+            alt="Sound on"
+              width="50" height="50" 
+              draggable="false"
+            >
+          </button>
+          
+        <audio id="click-sound" src="meow.mp3" preload="auto"></audio>
+        <script src="bananacal.js"></script>
+
+</body>
